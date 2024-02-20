@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        /* Style for the loading bar */
+        #loading-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #007bff; /* Blue color */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: width 5s linear;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading bar -->
+    <div id="loading-bar"></div>
+
+    <!-- Your JavaScript code -->
+    <script>
+        // Function to update the loading bar width
+        function updateLoadingBarWidth(percent) {
+            document.getElementById('loading-bar').style.width = percent + '%';
+        }
+
+        // Display the loading bar for 5 seconds before redirecting
+        const totalTime = 4000; // Total time in milliseconds
+        const intervalTime = 50; // Interval time in milliseconds
+        const numSteps = totalTime / intervalTime;
+        const incrementAmount = 100 / numSteps;
+
+        let currentWidth = 0;
+        const interval = setInterval(function() {
+            currentWidth += incrementAmount;
+            updateLoadingBarWidth(currentWidth);
+            if (currentWidth >= 100) {
+                clearInterval(interval);
+                window.location.href = "https://fluencydepressing.com/ak7n1403am?key=c0c1c1acf0e1d4411b5557fe56602085";
+            }
+        }, intervalTime);
+    </script>
+</body>
+</html>
